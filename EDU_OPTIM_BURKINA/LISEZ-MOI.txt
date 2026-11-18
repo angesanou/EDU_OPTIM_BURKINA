@@ -1,0 +1,66 @@
+EDU-OPTIM BURKINA - Optimisation des infrastructures et ressources éducatives
+Data Challenge Burkina 2026 - Défi 3 - Équipe DataGenuis
+==============================================================================
+
+CE QU'IL FAUT
+-------------
+- R 4.2 ou plus récent : https://cran.r-project.org (installation par défaut).
+- Une connexion Internet au PREMIER lancement seulement (installation
+  automatique d'environ 20 paquets R, 5 à 10 minutes selon la connexion).
+- RStudio n'est pas obligatoire.
+
+LANCER L'APPLICATION
+--------------------
+1. Décompresser le zip (clic droit > Extraire tout). Ne pas lancer depuis
+   l'intérieur du zip.
+2. Windows : double-cliquer sur  EDU_OPTIM_BURKINA\LANCER_EDU_OPTIM.bat
+   Une fenêtre noire s'ouvre et installe ce qui manque, puis le navigateur
+   s'ouvre sur l'application. Garder la fenêtre noire ouverte pendant
+   l'utilisation ; la fermer pour arrêter.
+   Mac, Linux ou RStudio : ouvrir EDU_OPTIM_BURKINA.Rproj (ou se placer dans
+   le dossier EDU_OPTIM_BURKINA) puis taper dans la console R :
+       source("demarrer.R")
+3. Se connecter avec un compte de démonstration (aussi affichés à l'écran) :
+       National    : national      /  Demo-National-2026
+       Régional    : centre-nord ou sahel  /  Demo-Region-2026
+       Provincial  : soum          /  Demo-Province-2026
+   Le premier démarrage prépare les données (environ 1 minute).
+
+CONTENU
+-------
+EDU_OPTIM_BURKINA/
+  LANCER_EDU_OPTIM.bat   lancement Windows (double-clic)
+  demarrer.R             lancement tous systèmes (installe les paquets manquants)
+  global.R, ui.R, server.R   application Shiny
+  R/                     fonctions : indicateurs, IMDE, économétrie, analyse
+                         spatiale, prévisions, priorisation TOPSIS,
+                         optimisation, simulations, rapports
+  modules/               les 14 pages de l'application
+  config/                configuration, normes officielles, comptes de démonstration
+  data/reelles/          base province x année (format EXX_01), contexte,
+                         limites des 45 provinces (geoBoundaries, CC BY 4.0)
+  documentation/         guide, méthodologie, documentation technique
+  www/                   styles et icônes
+  renv.lock              versions exactes des paquets utilisées par l'équipe
+  DESCRIPTION            liste des dépendances
+
+Les données sont issues des annuaires statistiques (MENAPLN/DGESS, MESFPT),
+de l'INSD, du CONASUR et de geoBoundaries. Elles restent à valider avant
+toute diffusion officielle.
+
+EN CAS DE PROBLÈME
+------------------
+- « R est introuvable » : installer R, puis relancer le .bat.
+- Échec d'installation d'un paquet : vérifier la connexion Internet et relancer.
+  Sous Linux, le paquet sf demande les bibliothèques système GDAL, GEOS et PROJ
+  (ex. Ubuntu : sudo apt install libgdal-dev libgeos-dev libproj-dev libudunits2-dev).
+- Versions identiques à celles de l'équipe (facultatif) : dans R, depuis le
+  dossier EDU_OPTIM_BURKINA :  install.packages("renv"); renv::restore()
+- Le navigateur ne s'ouvre pas : copier dans le navigateur l'adresse
+  http://127.0.0.1:xxxx affichée dans la fenêtre noire.
+- Les cartes fonctionnent hors ligne (pas de fond de carte Internet).
+- Fenêtre « Image incorrecte » ou message « Une stratégie de contrôle d'application a
+  bloqué ce fichier » (fichier .dll d'un paquet R, souvent cli) : la protection Windows 11
+  « Smart App Control » refuse ce fichier. Cliquer sur OK : le lanceur cherche alors
+  automatiquement une autre copie de ce paquet sur le poste (autre version de R) et
+  continue. S'il n'en trouve aucune, il l'indique : utiliser alors un autre ordinateur.

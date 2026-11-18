@@ -1,0 +1,18 @@
+contexte_province.csv - variables de contexte par province et annee (2015-2024)
+==========================================================================
+taux_pauvrete      Incidence de la pauvrete monetaire (part de la population, 0-1).
+                   Source : INSD, Principaux resultats EHCVM-2021, tableau 3 (EHCVM 2018 et 2021).
+                   Valeur REGIONALE attribuee a chaque province de la region (pas de chiffre provincial publie).
+                   2015-2018 = valeur 2018 ; 2021-2024 = valeur 2021 ; 2019-2020 = interpolation lineaire.
+taux_urbanisation  Part de la population residant en milieu urbain (0-1).
+                   Source : INSD, RGPH 2019, Synthese des resultats definitifs, tableau 59 (urbain / total
+                   par province ; total controle = 20 505 155 habitants). Valeur 2019 repetee sur toutes les annees.
+indice_insecurite  Part des ecoles primaires fermees pour insecurite au 31/12/2021 (0-1) :
+                   fermees (rapport ESU, releve du 31/12/2021) / (ouvertes recensees + fermees).
+                   Indicateur d'exposition, constant dans le temps (absorbe par les effets fixes).
+Genere le 16/11/2026 a partir de la base traitee (02_traitement_donnees.R) et des publications INSD.
+
+limites_provinces_geoBoundaries_BFA_ADM2.geojson - limites des 45 provinces (ancien decoupage)
+Source : geoBoundaries (William & Mary geoLab), gbOpen BFA ADM2, d'apres la Banque mondiale (2017),
+licence CC BY 4.0, version simplifiee. Telecharge le 16/11/2026.
+Correction : "Komonjdjari" (orthographe du fichier) renomme "Komondjari" (nom officiel) ; nom d'origine garde dans nom_source.

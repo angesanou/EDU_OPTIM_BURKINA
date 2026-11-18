@@ -1,0 +1,38 @@
+LISEZ-MOI - 02_nettoyage - Nettoyage et controle des donnees
+============================================================
+
+Equipe : Datagenius - Defi 3 : EDU-OPTIM Burkina - Data Challenge Burkina 2026
+Genere le : 18/11/2026 17:46 par 03_preparer_depots.R
+
+Objet du depot
+--------------
+Traitement des valeurs manquantes et incoherentes, imputations tracees cellule par cellule.
+
+Fichiers
+--------
+- Datagenius_02-nettoyage_D3_engineer_script-traitement-donnees_v1.R
+    Origine : 02_traitement_donnees.R
+    Contenu : Script R complet : controles structurels, types de valeurs manquantes, regles de coherence, controles temporels, imputations (interpolation, tendance, calage), indicateurs derives, export.
+
+- Datagenius_02-nettoyage_D3_engineer_rapport-traitement_v1.md
+    Origine : data/traitees/rapport_traitement.md
+    Contenu : Rapport genere par le script : anomalies detectees, corrections, imputations et origine de chaque valeur.
+
+- Datagenius_02-nettoyage_D3_engineer_base-traitee-tracee_v1.xlsx
+    Origine : data/traitees/base_traitee.xlsx
+    Contenu : Base apres traitement, avec la colonne d'origine de chaque cellule (OBS, EST, DED, IMP_*, NEUTRALISE, NA_*).
+
+Nommage
+-------
+EQUIPE_ETAPE_DEFI_ROLE_description_vN.ext (reglement du challenge), sans espace ni accent.
+
+Reproduction
+------------
+Depuis le dossier du projet : Rscript run_all.R (chaine complete) ; Rscript run_all.R --app (avec l'application).
+Versions des paquets : EDU_OPTIM_BURKINA/versions_paquets.csv (et renv.lock si present : renv::restore()).
+
+Sources et regles
+-----------------
+Sources officielles uniquement (MENAPLN/DGESS, CNS, INSD, CONASUR, OCHA/HDX, geoBoundaries).
+Chaque valeur de la base traitee porte son origine (observee, estimee, deduite, imputee, neutralisee).
+Les chiffres regionaux ne sont jamais reportes sur les provinces.

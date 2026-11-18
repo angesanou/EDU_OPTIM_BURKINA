@@ -1,0 +1,17 @@
+# Fichiers temporaires R et RStudio
+.Rhistory
+.RData
+.Rproj.user/
+*.log
+
+# Caches régénérés par l'application ou par run_all.R
+EDU_OPTIM_BURKINA/data/prepare/
+EDU_OPTIM_BURKINA/bibliotheque_appoint/
+EDU_OPTIM_BURKINA/renv/library/
+EDU_OPTIM_BURKINA/resultats/rapports/*.pdf
+EDU_OPTIM_BURKINA/resultats/rapports/*.xlsx
+EDU_OPTIM_BURKINA/resultats/rapports/*.png
+
+# Fichiers Office ouverts
+~$*
+EDU_OPTIM_BURKINA/resultats/exports/

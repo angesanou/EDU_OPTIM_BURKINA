@@ -1,0 +1,44 @@
+# ==========================================================================
+# EDU-OPTIM BURKINA — fichier de configuration central
+# --------------------------------------------------------------------------
+# C'est LE fichier à modifier pour passer des données synthétiques aux
+# données réelles : changez `source_donnees` et le chemin `base_exx`.
+# Tous les chemins sont relatifs au dossier du projet.
+# ==========================================================================
+
+application:
+  nom: "EDU-OPTIM BURKINA"
+  version: "1.0.0"
+  # true = écran de connexion obligatoire (comptes dans config/utilisateurs.csv)
+  authentification: true
+  # Fond de carte en ligne (OpenStreetMap / CARTO). false = cartes hors ligne.
+  fond_carte_en_ligne: false
+
+# "synthetique" ou "reel"
+source_donnees: "reel"
+
+donnees:
+  synthetique:
+    base_exx: "data/synthetique/EXX_01_base_synthetique.xlsx"
+    etablissements: "data/synthetique/etablissements.csv"
+    contexte: "data/synthetique/contexte_province.csv"
+    geometries: "data/synthetique/geometries_synthetiques.gpkg"
+    mention: "DONNÉES SYNTHÉTIQUES, ENVIRONNEMENT DE DÉMONSTRATION, AUCUNE STATISTIQUE OFFICIELLE"
+  reel:
+    # Classeur au format EXX_01 rempli (ex. sortie de remplir_base_v3.py)
+    base_exx: "data/reelles/EXX_01_base_reelle.xlsx"
+    # Optionnels : laissez "" si vous ne les avez pas, l'application s'adapte.
+    etablissements: ""
+    contexte: "data/reelles/contexte_province.csv"
+    # Limites administratives (ex. COD-AB converti en .gpkg ou .geojson).
+    # Astuce : les géométries synthétiques peuvent servir en attendant :
+    # "data/synthetique/geometries_synthetiques.gpkg"
+    geometries: "data/reelles/limites_provinces_geoBoundaries_BFA_ADM2.geojson"
+    mention: "Plateforme d'optimisation de la répartition des infrastructures scolaires et du personnel enseignant"
+
+# Années et horizon de projection
+periode:
+  horizon_projection: 2030
+
+# Graine aléatoire (génération des données, bootstrap, Monte-Carlo)
+graine: 20261115

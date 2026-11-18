@@ -1,0 +1,46 @@
+LISEZ-MOI - 01_collecte - Collecte des donnees
+============================================================
+
+Equipe : Datagenius - Defi 3 : EDU-OPTIM Burkina - Data Challenge Burkina 2026
+Genere le : 18/11/2026 17:46 par 03_preparer_depots.R
+
+Objet du depot
+--------------
+Base collectee par province et par annee (prescolaire, primaire, post-primaire, secondaire), variables de contexte et limites administratives.
+
+Fichiers
+--------
+- Datagenius_01-collecte_D3_engineer_base-collecte-provinces-2015-2024_v6.xlsx
+    Origine : Collecte_data_rempli_v6.xlsx
+    Contenu : Base de collecte remplie (onglets PANEL_PROVINCE, PANEL_REGION, DIM_GEO, DICTIONNAIRE...). Version 6.
+
+- Datagenius_01-collecte_D3_architect_structure-base-donnees_v1.xlsx
+    Origine : Datagenius_01-collecte_D3_architect_structure-base-donnees_v1.xlsx
+    Contenu : Gabarit vide de la base : structure des onglets, dictionnaire des variables et dimensions.
+
+- Datagenius_01-collecte_D3_engineer_contexte-pauvrete-urbanisation-insecurite_v1.csv
+    Origine : EDU_OPTIM_BURKINA/data/reelles/contexte_province.csv
+    Contenu : Variables de contexte par province et annee : pauvrete (INSD EHCVM 2018 et 2021, niveau regional interpole), urbanisation (RGPH 2019, tableau 59), insecurite (part des ecoles primaires fermees au 31/12/2021).
+
+- Datagenius_01-collecte_D3_engineer_sources-contexte_v1.txt
+    Origine : EDU_OPTIM_BURKINA/data/reelles/LISEZ_MOI_contexte.txt
+    Contenu : Sources et regles de construction du fichier de contexte.
+
+- Datagenius_01-collecte_D3_engineer_limites-45-provinces_v1.geojson
+    Origine : EDU_OPTIM_BURKINA/data/reelles/limites_provinces_geoBoundaries_BFA_ADM2.geojson
+    Contenu : Limites des 45 provinces (geoBoundaries, d'apres la Banque mondiale, licence CC BY 4.0). Komonjdjari renomme Komondjari.
+
+Nommage
+-------
+EQUIPE_ETAPE_DEFI_ROLE_description_vN.ext (reglement du challenge), sans espace ni accent.
+
+Reproduction
+------------
+Depuis le dossier du projet : Rscript run_all.R (chaine complete) ; Rscript run_all.R --app (avec l'application).
+Versions des paquets : EDU_OPTIM_BURKINA/versions_paquets.csv (et renv.lock si present : renv::restore()).
+
+Sources et regles
+-----------------
+Sources officielles uniquement (MENAPLN/DGESS, CNS, INSD, CONASUR, OCHA/HDX, geoBoundaries).
+Chaque valeur de la base traitee porte son origine (observee, estimee, deduite, imputee, neutralisee).
+Les chiffres regionaux ne sont jamais reportes sur les provinces.

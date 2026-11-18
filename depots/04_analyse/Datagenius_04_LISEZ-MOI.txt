@@ -1,0 +1,44 @@
+LISEZ-MOI - 04_analyse - Analyse et application
+============================================================
+
+Equipe : Datagenius - Defi 3 : EDU-OPTIM Burkina - Data Challenge Burkina 2026
+Genere le : 18/11/2026 17:46 par 03_preparer_depots.R
+
+Objet du depot
+--------------
+Application Shiny EDU-OPTIM : indicateurs, IMDE, cartographie et autocorrelation spatiale, econometrie de panel, previsions 2030, priorisation TOPSIS, optimisation des ressources.
+
+Fichiers
+--------
+- Datagenius_04-analyse_D3_architect_application-edu-optim_v1.zip
+    Origine : EDU_OPTIM_BURKINA
+    Contenu : Code source complet de l'application, avec tests et scripts (R/, modules/, config/, tests/, documentation/, data/reelles/). Lancement : LANCER_EDU_OPTIM.bat ou run_all.R --app.
+
+- Datagenius_04-analyse_D3_architect_solution-edu-optim-burkina_v1.zip
+    Origine : livrable/EDU-OPTIM_BURKINA_solution.zip
+    Contenu : Solution prete a lancer sur un autre poste : decompresser puis double-cliquer sur
+    EDU_OPTIM_BURKINA/LANCER_EDU_OPTIM.bat (installe les paquets manquants et ouvre l'application).
+    Depot GitHub de reference : https://github.com/angesanou/EDU-OPTIM-BF
+
+- Datagenius_04-analyse_D3_engineer_reproduction-chaine-complete_v1.R
+    Origine : run_all.R
+    Contenu : Relance toute la chaine : environnement, traitement, preparation de l'application, tests unitaires.
+
+- Datagenius_04-analyse_D3_scientist_methodologie-scientifique_v1.md
+    Origine : EDU_OPTIM_BURKINA/documentation/methodologie_scientifique.md
+    Contenu : Methodologie : indicateurs, IMDE (5 dimensions, 16 indicateurs), econometrie, previsions, TOPSIS, optimisation lineaire, adaptations aux donnees disponibles.
+
+Nommage
+-------
+EQUIPE_ETAPE_DEFI_ROLE_description_vN.ext (reglement du challenge), sans espace ni accent.
+
+Reproduction
+------------
+Depuis le dossier du projet : Rscript run_all.R (chaine complete) ; Rscript run_all.R --app (avec l'application).
+Versions des paquets : EDU_OPTIM_BURKINA/versions_paquets.csv (et renv.lock si present : renv::restore()).
+
+Sources et regles
+-----------------
+Sources officielles uniquement (MENAPLN/DGESS, CNS, INSD, CONASUR, OCHA/HDX, geoBoundaries).
+Chaque valeur de la base traitee porte son origine (observee, estimee, deduite, imputee, neutralisee).
+Les chiffres regionaux ne sont jamais reportes sur les provinces.

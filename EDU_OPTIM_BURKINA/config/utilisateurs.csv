@@ -1,0 +1,5 @@
+"identifiant","nom_complet","profil","perimetre","mot_de_passe_hache","sel"
+"national","Direction nationale (démo)","NATIONAL","NAT","af5c6cab2831a773292794a3587ac36b94ef4c9cd6d14f742ea62f2b2414ea66","7bcxSLw80rVasJVB"
+"centre-nord","Direction régionale du Centre-Nord (démo)","REGIONAL","REG05","a17c7db07e50db6d1648a735f2ac8adc425ed20bb28536fd5bd698369cc6e668","mjTvGZPTnXRPRdbC"
+"sahel","Direction régionale du Sahel (démo)","REGIONAL","REG12","78b536aab40a0006c664597042e8c99ea56e025235d5a3fa28708214bc9588f5","PmPzb09M9qNuu3Fy"
+"soum","Direction provinciale du Soum (démo)","PROVINCIAL","PRV1203","c0f813c4ff75abcb366bcc72f8c3b9b3497c119e953c17f8e9b463de72ed5ba5","xid6MFc9J6uO7vjB"

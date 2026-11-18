@@ -1,0 +1,38 @@
+LISEZ-MOI - 03_transformation - Transformation pour l'analyse
+============================================================
+
+Equipe : Datagenius - Defi 3 : EDU-OPTIM Burkina - Data Challenge Burkina 2026
+Genere le : 18/11/2026 17:46 par 03_preparer_depots.R
+
+Objet du depot
+--------------
+Base au format d'entree de l'application (Datagenius_01) et panel province x annee.
+
+Fichiers
+--------
+- Datagenius_03-transformation_D3_engineer_base-application-exx01_v1.xlsx
+    Origine : EDU_OPTIM_BURKINA/data/reelles/Datagenius_01_base_reelle.xlsx
+    Contenu : Base au format Datagenius_01 (DIM_GEO, PANEL_PROVINCE, PANEL_REGION, NORMES, DICTIONNAIRE) lue par l'application.
+
+- Datagenius_03-transformation_D3_engineer_panel-province-annee_v1.csv
+    Origine : data/traitees/panel_province_traite.csv
+    Contenu : Panel province x annee x cycle traite, format plat (CSV, UTF-8).
+
+- Datagenius_03-transformation_D3_architect_normes-officielles_v1.csv
+    Origine : EDU_OPTIM_BURKINA/config/normes_officielles.csv
+    Contenu : Normes utilisees pour les deficits (taille de classe, eleves par enseignant, places par table-banc, eleves par latrine), avec leurs sources (MENA 2022, PSEF 2017-2030...).
+
+Nommage
+-------
+EQUIPE_ETAPE_DEFI_ROLE_description_vN.ext (reglement du challenge), sans espace ni accent.
+
+Reproduction
+------------
+Depuis le dossier du projet : Rscript run_all.R (chaine complete) ; Rscript run_all.R --app (avec l'application).
+Versions des paquets : EDU_OPTIM_BURKINA/versions_paquets.csv (et renv.lock si present : renv::restore()).
+
+Sources et regles
+-----------------
+Sources officielles uniquement (MENAPLN/DGESS, CNS, INSD, CONASUR, OCHA/HDX, geoBoundaries).
+Chaque valeur de la base traitee porte son origine (observee, estimee, deduite, imputee, neutralisee).
+Les chiffres regionaux ne sont jamais reportes sur les provinces.

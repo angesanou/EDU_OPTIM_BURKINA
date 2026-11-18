@@ -1,0 +1,14 @@
+Type: Project
+Package: EDUOPTIMBURKINA
+Title: EDU-OPTIM BURKINA - Plateforme d'aide à la décision pour l'éducation
+Version: 1.0.0
+Description: Diagnostic territorial, indice multidimensionnel de déficit éducatif,
+    économétrie de panel, analyse spatiale, prévisions, priorisation TOPSIS,
+    optimisation des ressources et simulations (application Shiny).
+License: Usage interne - Data Challenge Burkina 2026
+Encoding: UTF-8
+Depends: R (>= 4.2)
+Imports: shiny, bslib, plotly, leaflet, DT, htmltools, readxl, openxlsx, data.table,
+    yaml, digest, commonmark, sf, spdep, plm, lmtest, sandwich, car, forecast, lpSolve,
+    ggplot2
+Suggests: testthat, renv
